@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width:320px) and (max-width:374px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width:375px) and (max-width:410px) {
+    html {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-width:411px) and (max-width:767px) {
+    html {
+        font-size: 21px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    html {
+        font-size: 39px;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    html {
+        font-size: 52px;
+    }
+}
+
+body {
+    height: 100vh;
+}
+
+#root {
+    height: 100%;
+
+    .App {
+        font-size: 1.0625rem;
+        width: 100vw;;
+        position: absolute;
+        .footerFiex{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
