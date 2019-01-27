@@ -1,6 +1,50 @@
 #home{
     height: 100vh;
     display: flex;
+    // position: absolute;
     flex-direction: column;
-    
+    #H-search {
+        height: 2.25rem;
+        padding: 2% 0 2% 0;
+        .city{
+            float: left;
+            color: black;
+            height: 1.875rem;
+            line-height: 1.875rem;
+            margin: 0 1.25rem 0 0.625rem;
+            .iconfont {
+                font-size: 1.3125rem;
+            }
+        }
+        .searchBar{
+            float: left;
+            width: 60%;
+            >span{
+                width: 100%;
+                .ant-input{
+                    border-radius: 0.21333rem;
+                    background: #f0f0f0;
+                    width: 100%;
+                    height: 1.625rem;
+                    font-size: 0.875rem;
+                }
+                .ant-input-suffix{
+                    display: block;
+                    margin: 1%;
+                    font-size: 1.3125rem;
+                }
+            }
+        }
+      
+    }
+    #main{
+        display: flex;
+        flex: 1;
+        overflow-y: scroll;
+        >div{
+            width: 100vw;
+            height: 1500px;
+            background: #58bc58;
+        }
+    }
 }
