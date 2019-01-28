@@ -31,13 +31,14 @@ class Appbody extends React.Component{
             });
     }
     render(){
+        console.log(this.state.dataList)
         return <div id="main">
                     <Carousel
-                        autoplay={false}
+                        autoplay={true}
                         infinite
                         // beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
                         // afterChange={index => console.log('slide to', index)}
-                    >
+                    >   
                          {this.state.dataList.map((item,idx) => (
                             <a
                             key={item}
