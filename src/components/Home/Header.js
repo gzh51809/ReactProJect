@@ -1,8 +1,5 @@
 import React from 'react';
-import { Input } from 'antd';
-const Search = Input.Search;
-//引入样式
-// import '../CSS/header/index.scss'
+import {NavLink} from 'react-router-dom';
 class Header extends React.Component{
     render(){
         return <div id="H-search">
@@ -11,11 +8,13 @@ class Header extends React.Component{
                     <span>广州</span>
                 </div>
                 <div className="searchBar">
-                    <Search
-                    placeholder="搜索演出、艺人或场馆"
-                    />
+                    <NavLink to="search">
+                        <span>
+                            <i className="iconfont icon-sousuo"></i>
+                            <span>搜索演出、艺人或场馆</span>
+                        </span>
+                    </NavLink>
                 </div>
-                
         </div>
     } 
 }

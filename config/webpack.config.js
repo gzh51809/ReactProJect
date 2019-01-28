@@ -347,11 +347,17 @@ module.exports = function(webpackEnv) {
                       },
                     },
                   ],
-                    ["import", {
-                      "libraryName": "antd",
-                      "libraryDirectory": "es",
-                      "style": "css" // `style: true` 会加载 less 文件
-                    }]
+                  //antd
+                  // ["import",
+                  //  {
+                  //     "libraryName": "antd",
+                  //     "libraryDirectory": "es",
+                  //     "style": "css" // `style: true` 会加载 less 文件
+                  //   }
+                  // ],
+                  //antd-mobile
+                  ["import", { libraryName: "antd-mobile",style: "css" }] // `style: true` 会加载 less 文件
+                    
                   
                 ],
                 // This is a feature of `babel-loader` for webpack (not Babel itself).

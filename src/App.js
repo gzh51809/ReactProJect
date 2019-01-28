@@ -6,6 +6,7 @@ import Theater from './components/Theater';
 import Mine from './components/Mine';
 import Ticket from './components/E-ticket';
 import './CSS/pulic.scss';
+import SearchPage from './components/Home/search';
 class App extends Component {
   constructor(){
     super();
@@ -76,6 +77,7 @@ class App extends Component {
         <Route path='/theater' component={Theater}/>
         <Route path='/mine' component={Mine}/>
         <Route path='/ticket' component={Ticket}/>
+        <Route path='/search' component={SearchPage}/>
         <Redirect from="/" to="/home"/>
        </Switch>
        <div className="footerFiex">

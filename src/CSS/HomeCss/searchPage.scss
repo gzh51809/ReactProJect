@@ -1,0 +1,80 @@
+.seachBox {
+    height: 2.75rem;
+    line-height: 2.75rem;
+    padding-top: 0.625rem;
+    border-bottom: 1px solid #ccc;
+    >i {
+        float: left;
+        font-size: 1.4375rem;
+        line-height: 2.25rem;
+        margin:0 2% 0 2%;
+    }
+    .searchText {
+        position: relative;
+        line-height: 2.75rem; 
+        width: 13.75rem;
+        line-height: 1.875rem;
+        float: left;
+        i {
+            position: absolute;
+            top: 2%;
+            left: 0.3125rem;
+            display: inline-block;
+            width: 0.9375rem;
+            height: 0.9375rem;
+            font-size: 1.3125rem;
+            margin-right: 0.375rem;
+            color: #b3b3b3;
+        }
+
+        input {
+            text-indent: 1.5625rem;
+            height: 1.875rem;
+            line-height:1.875rem;
+            color: black;
+            width: 100%;
+            border-radius: 0.25rem;
+            border: 1px solid #cccccc;
+            background: #ebebeb;
+        }
+      
+    }
+    .clickSearch{
+        margin-left: 3%;
+        float: left;
+        height: 2rem;
+        width: 2.6875rem;
+        text-align: center;
+        border-radius: 0.625rem;
+        line-height: 2rem;
+        border:1px solid  #cccccc;
+    }
+    
+
+}
+p{
+    margin: 0.625rem 0 0 0.625rem;
+    font-size: 0.8125rem;
+    color: #666;
+}
+.hot{
+    margin: 0.625rem 0 0 0.625rem;
+    a{
+        text-decoration: none;
+        color: black;
+        font-size: 0.75rem;
+        display: inline-block;
+        height: 2rem;
+        line-height: 2rem;
+        padding: 0 0.625rem 0 0.625rem;
+        margin: 0.625rem 0.625rem 0 0 ;
+        background: #ebebeb;
+    }
+}
+.history{
+    margin-top: 1.25rem;
+    display: none;
+}
+.chuxiang{
+    display: block; 
+}
