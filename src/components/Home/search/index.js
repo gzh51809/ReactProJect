@@ -29,10 +29,13 @@ class SearchPage extends React.Component{
                     name:'金锁记',
                 }
             ],
-            isHaveHistory:false
+            isHaveHistory:false,
+            iconIsApear:true
         }
         this.searchKeyWord = this.searchKeyWord.bind(this);
         this.goBack = this.goBack.bind(this);
+        this.iconDisapear = this.iconDisapear.bind(this);
+        this.iconApear = this.iconApear.bind(this);
     }
 
     searchKeyWord(){
@@ -47,14 +50,25 @@ class SearchPage extends React.Component{
     goBack(){
         this.props.history.goBack();
     }
+
+    iconDisapear(){
+        this.setState({
+            iconIsApear:false
+        })
+    }
+    iconApear(){
+        this.setState({
+            iconIsApear:true
+        })
+    }
     render(){
         console.log('histor',this.props.history);
         return <div id="H-search">
                 <div className="seachBox">
                     <i className="iconfont icon-fanhui"  onClick={this.goBack}></i>
                       <span className="searchText">
-                            <i className="iconfont icon-sousuo"></i>
-                            <input type="text" ref="keyWord" placeholder="搜索演出、艺人或场馆"/>
+                            <i className={`iconfont icon-sousuo ${this.state.iconIsApear?'':'disapear'}`} ref="icon"></i>
+                            <input type="text" ref="keyWord" onChange={this.iconDisapear} onBlur={this.iconApear} placeholder="搜索演出、艺人或场馆"/>
                      </span>
                     <span className="clickSearch" onClick={this.searchKeyWord}>搜索</span>
                 </div>

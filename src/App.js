@@ -84,12 +84,13 @@ class App extends Component {
           <ul>
             {
               this.state.footerNav.map((item,idx)=>{
-                return  <li key={item.path} onClick={()=>this.NavChange(idx)}>
+                return ( 
+                      <li key={item.path} onClick={()=>this.NavChange(idx)}>
                          <NavLink to={item.path} className={this.state.currentIndex==idx?'selected':''}>
                         <i  className={"iconfont "+item.icon}></i>
-                        <p>{item.text}</p>
+                        <p className={this.state.currentIndex==idx?'selected':''}>{item.text}</p>
                         </NavLink>
-              </li>
+              </li>)
               })
             }
              
