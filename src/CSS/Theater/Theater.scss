@@ -1,0 +1,36 @@
+#Theater{
+    padding: 1.25rem;
+    ul{
+        li{
+            list-style: none;
+            width: 100%;
+            overflow: hidden;
+            >div{
+                float: left;
+            }
+            .img{
+                a{
+                    img{
+                        width: 6.25rem;
+                        height: 6.25rem;
+                    }
+                }
+            }
+            .message{
+                padding: 0 0.625rem;
+                width: 8.125rem;
+                .headLine{
+                    font-size: 15px;
+                    color: black;
+                    font-weight: 600;
+                }
+                .active{
+                   text-decoration: none; 
+                }
+            }
+        }
+    }
+    >div{
+        height: 3.125rem;
+    }
+}

@@ -1,0 +1,127 @@
+
+#show {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .showSearch {
+        margin: 0.625rem;
+        line-height: 1.9375rem;
+        >div {
+            float: left;
+        }
+        .city {
+            color: #666666;
+            float: left;
+            width: 3.125rem;
+            font-size: 1.0625rem;
+            margin-right: 0.625rem;
+
+            span {
+                position: relative;
+
+                i {
+                    position: absolute;
+                    top: 40%;
+                    left: 110%;
+                    height: 0;
+                    border: 0.25rem solid;
+                    border-color: black transparent transparent transparent;
+                    font-size: 0;
+                }
+            }
+        }
+
+        .searchBar {
+            width: 11.25rem;
+            float: left;
+            font-size: 0.9375rem;
+            border-radius: 0.25rem;
+            margin-right: 0.9375rem;
+            line-height: 1.875rem;
+            background: #ebebeb;
+
+            a {
+                text-decoration: none;
+
+                span {
+                    font-size: 0.875rem;
+
+                    i {
+                        font-size: 0.9375rem;
+                    }
+                }
+            }
+        }
+
+        .sort {
+            font-size: 1.0625rem;
+            position: relative;
+            color: #666666;
+
+            .sortType {
+                position: absolute;
+                top: 80%;
+                left: -0.9375rem;
+                width: 4.375rem;
+                font-size: 0.875rem;
+                color: #666666;
+
+                span {
+                    padding-bottom: 0.3125rem;
+                }
+
+                span:nth-child(1) {
+                    border-bottom: 1px solid #e6e6e6;
+                }
+
+                .selected {
+                    color: #ff7919;
+                }
+            }
+
+            .isapear {
+                display: none;
+            }
+        }
+    }
+    .LongList {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        overflow-y: scroll;
+        height: 1;
+        ul{
+            li{
+                list-style: none;
+                overflow: hidden;
+                div{
+                    float: left;
+                }
+                a{
+                    .img{
+                        a{
+                            img{
+                                width: 6.25rem;
+                                height: 9.375rem;
+                            }
+                        }
+                    }
+                    .message{
+                        width: 12.8125rem;
+                        height: 9.375rem;
+                    }     
+                }
+                
+            }
+        }
+        .LoadingMore{
+            height: 6.25rem ;
+            p{
+                height: 6.25rem;
+                text-align: center;
+            }
+        }
+    }
+    
+   
+}

@@ -89,10 +89,6 @@ class Appbody extends React.Component{
                     showList:res.data.data,
                 })
             });
-            // axios.get('http://localhost:4008/farapi/index/getLocationCity?type=ip')
-            // .then(res=>{
-            //     console.log(res)
-            // });
     }
     render(){
         console.log(this.state.showList)
