@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Route,Switch,Redirect,withRouter,NavLink} from 'react-router-dom';
 import Home from './components/Home';
+import Login from './components/login';
 import Show from './components/Show';
 import Theater from './components/Theater';
 import Mine from './components/Mine';
@@ -38,17 +39,26 @@ class App extends Component {
           icon:'icon-wode'
         },
       ],
-      currentIndex:0
+      currentIndex:0,
+      islogin:false
     }
     this.NavChange = this.NavChange.bind(this);
   }
 
-  NavChange(idx){
+  NavChange(idx,path){
     this.setState({
       currentIndex:idx
     });
+    if(path=='/ticket'&&!this.state.islogin){
+      this.props.history.push('/login')
+    }
+    if(path=='/mine'&&!this.state.islogin){
+      this.props.history.push('/login')
+    }
   }
   componentDidMount(){
+    let user = sessionStorage.getItem('username');
+    console.log(user)
     let hash = window.location.hash.split('/');
     switch(hash[1]){
       case 'home' :
@@ -67,6 +77,12 @@ class App extends Component {
           this.setState({ currentIndex:4});
           break;
     }
+    if(user){
+      console.log(555)
+       this.setState({
+        islogin:true
+       })
+    }
   }
   render() {
     return (
@@ -78,14 +94,16 @@ class App extends Component {
         <Route path='/mine' component={Mine}/>
         <Route path='/ticket' component={Ticket}/>
         <Route path='/search' component={SearchPage}/>
+        <Route path='/login' component={Login}/>
         <Redirect from="/" to="/home"/>
-       </Switch>
+      </Switch>
+     
        <div className="footerFiex">
           <ul>
             {
               this.state.footerNav.map((item,idx)=>{
                 return ( 
-                      <li key={item.path} onClick={()=>this.NavChange(idx)}>
+                      <li key={item.path} onClick={()=>this.NavChange(idx,item.path)}>
                          <NavLink to={item.path} className={this.state.currentIndex==idx?'selected':''}>
                         <i  className={"iconfont "+item.icon}></i>
                         <p className={this.state.currentIndex==idx?'selected':''}>{item.text}</p>
@@ -93,12 +111,12 @@ class App extends Component {
               </li>)
               })
             }
-             
           </ul>
        </div>
       </div>
     );
   }
 }
+App = withRouter(App);
 
 export default App;

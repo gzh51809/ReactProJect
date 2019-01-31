@@ -6,6 +6,7 @@
     .showSearch {
         margin: 0.625rem;
         line-height: 1.9375rem;
+        overflow: hidden;
         >div {
             float: left;
         }
@@ -83,6 +84,22 @@
                 display: none;
             }
         }
+        .navBar{
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            height: 40px;
+            // overflow-x: scroll;
+            width: 1000px;
+            ul{
+                position: absolute;
+                left: -400px;
+                li{
+                    list-style: none;
+                    float: left;
+                }
+            }
+        }
     }
     .LongList {
         display: flex;
@@ -99,16 +116,24 @@
                 }
                 a{
                     .img{
-                        a{
                             img{
                                 width: 6.25rem;
                                 height: 9.375rem;
                             }
-                        }
                     }
                     .message{
                         width: 12.8125rem;
                         height: 9.375rem;
+                        .moveTitle{
+                            color: black;
+                            font-weight: 600;
+                        }
+                        .show_time,.address{
+                            font-size: 14px;
+                        }
+                        .price{
+                            color:#ff7919;
+                        }
                     }     
                 }
                 

@@ -35,15 +35,13 @@ class LongList extends React.Component{
                             return  <li key={item.id} id={item.id}>
                                         <a href={'https://m.juooo.com/ticket/'+item.id}>
                                             <div className="img">
-                                                <a>
                                                     <img src={"http://image.juooo.com/"+item.pic}/>
-                                                </a>
                                             </div>
                                             <div className="message">
-                                                <p>{item.schedular_name}</p>
-                                                <p>{item.show_time}</p>
-                                                <p>{item.v_name}</p>
-                                                <p>￥{item.min_price}-{item.max_price}</p>
+                                                <p className="moveTitle">{item.schedular_name}</p>
+                                                <p className="show_time">{item.show_time}</p>
+                                                <p className="address">{item.v_name}</p>
+                                                <p className="price">￥{item.min_price}-{item.max_price}</p>
                                             </div>
                                         </a>
                                     </li>

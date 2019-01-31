@@ -1,6 +1,9 @@
-import React from 'react';
+import React from 'react'; 
 import {NavLink} from 'react-router-dom';
 class ShowSearch extends React.Component{
+    componentDidMount(){
+        // console.log()
+    }
     render(){
         let{sortByTime,sortByCommend,handleClick,ClickSort} = this.props;
         return  <div className="showSearch">
@@ -21,6 +24,24 @@ class ShowSearch extends React.Component{
                             <span className="selected" onClick={sortByCommend}>推荐排序</span><br/>
                             <span onClick={sortByTime}>时间排序</span>
                         </div>
+                    </div>
+                    <div className="navBar">
+                        <ul>
+                            <li>全部</li>
+                            <li>全部</li>
+                            <li>全部</li>
+                            <li>全部</li>
+                            <li>全部</li>
+                            <li>全部</li>
+                            <li>全部</li>
+                            <li>全部</li>
+                            <li>全部</li>
+                            <li>全部</li>
+                            <li>全部</li>
+                            <li>全部</li>
+                            <li>全部</li>
+                            <li>全部</li>
+                        </ul>
                     </div>
             </div>  
         

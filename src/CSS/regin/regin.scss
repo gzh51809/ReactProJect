@@ -1,0 +1,104 @@
+.App {
+    height: 100vh;
+
+    .regin {
+        height: 100vh;
+        margin: 20px 20px; 
+        .header {
+            overflow: hidden;
+            .fanhui {
+                float: left;
+            }
+
+            .denglu {
+                float: right;
+                color: #666
+            }
+        }
+
+        .reginMessage{
+            text-align: center;
+            margin-bottom: 25%;
+            .wellCome{
+                margin: 40px 20px; 
+                p{
+                    font-size: 1.5625rem;
+                    color: black;
+                    text-align: left
+                }
+            }
+            .nameAndPsw{
+                ul{
+                    padding: 0 1.25rem;
+                   li{
+                       list-style: none;
+                       margin: 20% 10%;
+                       padding-bottom: 0.625rem;
+                       border-bottom: 1px solid #6666;
+                       input{
+                           border: none;
+                           background: #f5f5f9;
+                           color: #222222;
+                       }
+                   } 
+                }
+                p{
+                    overflow: hidden;
+                    padding: 0 20px;
+                   .chechCode{
+                       float: left;
+                   } 
+                   .forgetPsw{
+                       float: right;
+                       a{
+                           color: #222222;
+                       }
+                   }
+                }
+            }
+            .clickRegin{
+                margin-top: 20%;
+                text-align: center;
+                span{
+                    display: inline-block;
+                    width: 13.75rem;
+                    height: 2.1875rem;
+                    background: #f89100;
+                    line-height: 2.1875rem;
+                    border-radius: 1.0625rem;
+                    color: white
+                }
+            }
+        }
+        .otherWay{
+            >div{
+                position: relative;
+                overflow: hidden;
+                height: 1.25rem;
+                text-align: center;
+                p{
+                    border: 0.0625rem solid #dadada;
+                    width: 65%;
+                    margin-left: 17%;
+                }
+                span{
+                    position: absolute;
+                    top: 0.3125rem;
+                    left: 35%;
+                    z-index:3;
+                    color: #666;
+                    font-size: 0.75rem;
+                    width: 5.625rem;
+                    text-align: center;
+                    background: #f5f5f9
+                }
+            }
+            .reginWay{
+               
+            }
+        }
+        .space{
+            height: 100px;
+        }
+    }
+}

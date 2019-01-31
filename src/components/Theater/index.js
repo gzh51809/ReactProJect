@@ -40,7 +40,9 @@ class Theater extends React.Component{
                                             <div className="message">
                                                 <p className="headLine">{item.name}</p>
                                                 <p>最近有{item.count}场演出</p>
-                                                <NavLink to=''>查看全部演出</NavLink>
+                                                <div>
+                                                    <NavLink to='/show'>查看全部演出</NavLink>
+                                                </div>
                                             </div>
                                     </li>
                         })
