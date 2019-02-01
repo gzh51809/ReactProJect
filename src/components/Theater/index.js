@@ -1,6 +1,13 @@
 import React from 'react';
 import axios from 'axios';
+import { Toast } from 'antd-mobile';
 import {NavLink} from 'react-router-dom';
+import store from '../../Redux/store.js';
+store.dispatch({type:'CHANGE_CURRENTINDEX',payload:{currentIndex:1}});
+// store.subscribe(function(){
+//     console.log("ADDState",store.getState().currentIndex)
+// })
+// console.log("store",store)
 import '../../CSS/Theater/Theater.scss';
 class Theater extends React.Component{
     constructor(){
@@ -16,14 +23,19 @@ class Theater extends React.Component{
             ]   
         }
     }
+    loadingToast() {
+        Toast.loading('加载中...', 1, () => {
+        //   console.log('Load complete !!!');
+        });
+      }
     componentDidMount(){
-        // Show/getShowList
+        this.loadingToast()
         axios.post('http://localhost:4008/farapi/Theatre/theatreListData?page=1')
         .then(res=>{
             this.setState({
                 LongDataList:res.data.datas
             })
-        })
+        });
     }
     render(){
         // console.log(this.state.LongDataList)

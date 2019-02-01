@@ -1,4 +1,5 @@
 import React from 'react';
+import { Toast } from 'antd-mobile';
 import axios from 'axios';
 class LongList extends React.Component{
     constructor(){
@@ -17,8 +18,13 @@ class LongList extends React.Component{
             ]
         }
     }
+    loadingToast() {
+        Toast.loading('加载中...', 1, () => {
+        //   console.log('Load complete !!!');
+        });
+      }
     componentDidMount(){
-        // Show/getShowList
+        this.loadingToast();
         axios.post('http://localhost:4008/farapi/Show/getShowList')
         .then(res=>{
             this.setState({
@@ -27,7 +33,7 @@ class LongList extends React.Component{
         })
     }
     render(){
-        console.log(this.state.LongDataList);
+        // console.log(this.state.LongDataList);
         return <div className="LongList">
                 <ul>
                     {

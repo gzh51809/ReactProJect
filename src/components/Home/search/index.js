@@ -62,7 +62,7 @@ class SearchPage extends React.Component{
         })
     }
     render(){
-        console.log('histor',this.props.history);
+        // console.log('histor',this.props.history);
         return <div id="H-search">
                 <div className="seachBox">
                     <i className="iconfont icon-fanhui"  onClick={this.goBack}></i>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, WingBlank } from 'antd-mobile';
+import { Carousel, Toast, WingBlank } from 'antd-mobile';
 import axios from 'axios';
 class Appbody extends React.Component{
     constructor(){
@@ -80,8 +80,15 @@ class Appbody extends React.Component{
                 }
             ]
         }
-    }
+    } 
+    
+    loadingToast() {
+        Toast.loading('加载中...', 1, () => {
+        //   console.log('Load complete !!!');
+        });
+      }
     componentDidMount(){
+        this.loadingToast();
             axios.post('http://localhost:4008/farapi/index/hotsShowList')
             .then(res=>{
                 this.setState({
@@ -91,7 +98,7 @@ class Appbody extends React.Component{
             });
     }
     render(){
-        console.log(this.state.showList)
+        // console.log(this.state.showList)
         return <div id="main">
                         <Carousel
                         autoplay={true}

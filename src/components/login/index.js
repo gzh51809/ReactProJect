@@ -1,6 +1,7 @@
 import React from 'react'; 
 import {NavLink} from 'react-router-dom';
 import '../../CSS/regin/regin.scss';
+import store from '../../Redux/store.js';
 class Login extends React.Component{
     constructor(){
         super();
@@ -8,7 +9,12 @@ class Login extends React.Component{
         this.ClickRegin = this.ClickRegin.bind(this);
     }
     goBack(){
+        let historyIndex = store.getState().lastIndex;//获取导航栏上一次的索引值
         this.props.history.go(-2);
+        //导航栏高亮回退
+        store.dispatch({type:'CHANGE_CURRENTINDEX',payload:{currentIndex:historyIndex,addClass:false}})
+        store.dispatch({type:'CHANG_NAVBAR_STATE',payload:{addClass:false}})
+        
     }
     ClickRegin(){
         let userName = this.refs.userName.value;
