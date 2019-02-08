@@ -1,0 +1,161 @@
+#mine{
+    height: 100vh;
+    // padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    .TopBoxOfMine{
+        padding: 1.25rem 0.625rem;
+        box-sizing: border-box;
+        position: relative;  
+        height:  10.625rem;
+        background: url('../../img/integral.jpg') no-repeat;
+        background-size: 100%;
+        .TopBoxOfMine-t{
+             >div{
+                 float: left;
+             }  
+             .userLogo{
+                 width: 3.125rem;
+                 height: 3.125rem;
+                 background-color:white;
+                 border-radius: 50%;
+                img{
+                    width: 3.125rem;
+                    height: 3.125rem;
+                }
+             }
+             .userIfo{
+                 padding-left: 1.25rem;
+                 position: relative;
+                 width: 75%;
+                >span{
+                    color: white
+                }
+                .userPower{
+                    img{
+                      width: 4.375rem;
+                      height: 0.9375rem;  
+                    }
+                }
+                P{
+                    margin-left: 0;
+                    color: white
+                }
+                i{
+                    display: inline-block;
+                    width: 1.875rem;
+                    height: 1.875rem;
+                    text-align: center;
+                    line-height: 1.875rem;
+                    position: absolute;
+                    top: 0;
+                    right: -0.625rem;
+                    color: white;
+                }
+             }
+        }
+        .TopBoxOfMine-b{
+            position: absolute;
+            background: url('../../img/pic_plusCard.png') no-repeat;
+            background-size: 19.4075rem;
+            width: 90%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 5rem;
+            padding: 0.625rem 1.25rem;
+            box-sizing: border-box;
+            border-radius: 0.42667rem 0.42667rem 0 0;
+            color: #d8c9a3;
+            ul{
+                overflow: hidden;
+                li{
+                    float: left;
+                    list-style: none;
+                }
+                .PLUS-CARD{
+                   width:60%;  
+                }
+                .VIPPower{
+                    margin-left: 0.625rem;
+                    font-size: 0.75rem;
+                    width: 5.375rem;
+                    height: 1.25rem;
+                    text-align: center;
+                    line-height: 1.25rem;
+                    border-radius: 0.625rem;
+                    background-color: rgba(255, 255, 255, 0.2)
+                }
+            }
+            p{
+                margin:0.9375rem 0 0 0; 
+                color: #d8c9a3;  
+            }
+        }
+    }
+    .bodyOfMine{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        .bodyOfMine-t{
+            width: 100%;
+            padding: 10px 0;
+            height: 40px;
+            background-color: white;
+            ul{
+                display: flex;
+                width: 100%;
+                li{
+                    display: flex;
+                    flex-direction: column;
+                    flex: 25%;
+                    list-style: none;
+                    text-align: center;
+                    border-right: 1px solid #e6e6e6;
+                    p{
+                        margin: 0 0 0.3125rem 0;
+                        color:#ff7919; 
+                        font-weight: bold;
+                        font-size: 17px;
+                        span{
+                            font-size: 13px;   
+                        }
+                    }
+                    >span{
+                        font-size: 14px;
+                        color:#8c8c8c
+                    }
+                }
+                li:nth-child(4){
+                    border: none
+                }
+            }
+        }
+        .myOrder{
+            margin-top: 1.25rem;
+            padding: 0  0.625rem;
+            height: 2.5rem;
+            line-height: 2.5rem;;
+            background-color: white;
+            font-size: 0.9375rem;
+            color: #8c8c8c;
+            a{
+                >div{
+                    float: right;
+                    color: #999;
+                    font-size: 0.8125rem;
+                    span{
+                        margin-right: 0.3125rem;
+                    }
+                    i{
+                        font-size: 0.75rem;  
+                    }
+                }
+                >span{
+                    margin-left: 0.3125rem;
+                }
+            }
+        }
+    }
+}

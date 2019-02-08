@@ -19,7 +19,7 @@ class Navbar extends React.Component{
                 {
                   text:'剧院',
                   path:'/theater',
-                  icon:'icon-shouye'
+                  icon:'icon-kexuanzuobiankuang'
                 },
                 {
                   text:'电子票',
@@ -38,7 +38,7 @@ class Navbar extends React.Component{
         let {NavChange} = this.props;
         let currentIndex = store.getState().currentIndex;
         let addClass = store.getState().addClass;
-        // console.log('navb',store.getState());
+        console.log('navb',addClass);
         return  <div className={`footerFiex ${addClass?'disapear':''}`}>
                 <ul>
                 {

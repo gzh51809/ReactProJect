@@ -65,7 +65,9 @@ class Eticket extends React.Component{
                 >
                 电子票
                 </NavBar>
-             
+                  <p>
+                    您还没有任何电子订单哦~
+                  </p>
              </div>
              )
     } 

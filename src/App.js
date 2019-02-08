@@ -24,15 +24,16 @@ class App extends Component {
     // this.setState({
     //   currentIndex:idx
     // });
+    // console.log(this.state.islogin)
     let historyIndex = store.getState().currentIndex;
     store.dispatch({type:'CHANGE_CURRENTINDEX',payload:{currentIndex:idx,lastIndex:historyIndex}})
-    if(path=='/ticket'&&!this.state.islogin){
-      this.props.history.push('/login');
-      store.dispatch({type:'CHANG_NAVBAR_STATE',payload:{addClass:true}})
-    }
-    if(path=='/mine'&&!this.state.islogin){
-      this.props.history.push('/login');
-      store.dispatch({type:'CHANG_NAVBAR_STATE',payload:{addClass:true}})
+    if(path=='/ticket'||path=='/mine'){
+      if(this.state.islogin=='false'){
+        this.props.history.push('/login');
+      }
+      if(path=='/ticket'){
+        store.dispatch({type:'CHANG_NAVBAR_STATE',payload:{addClass:true}})
+      }
     }
   }
   componentDidMount(){

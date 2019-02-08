@@ -5,7 +5,8 @@ let reducer = function(state=defaultState,action){
             return {
                 ...state,
                 currentIndex:action.payload.currentIndex,
-                lastIndex:action.payload.lastIndex
+                lastIndex:action.payload.lastIndex,
+                addClass:action.payload.addClass
             }
         case 'CHANG_NAVBAR_STATE' :
             return {
