@@ -1,0 +1,101 @@
+#CityListBox{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    .slide{
+        position: fixed;
+        width: 1.875rem;
+        // background-color: #cccccc;
+        right: 0;
+        height: 70%;
+        top:45%;
+        transform: translateY(-50%);
+        >span{
+            // padding-right: 0.3125rem;
+            float: right;
+            height: 1.0625rem;
+            font-size: 0.625rem;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    >div{
+        p{
+            margin: 0;
+        }
+    }
+    .CityListTop{
+        display: flex;
+        overflow: hidden;
+        padding: 0.625rem;
+        border-bottom: 0.0625rem solid #cccccc;
+        .goback{
+            width: 1rem;
+        }
+        .title{
+            width: 90%;
+            text-align: center;
+            color: #666666;
+        }
+    }
+    .CityListBody{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        overflow-y: scroll;
+        .CityListBody-t{
+            padding: 0 0.625rem; 
+            height: auto;
+            p{
+                margin-top: 0.625rem; 
+             }
+             .hotCities{
+                 height: 18.75rem;
+             }
+        }
+       
+        .cityList{
+            height: auto;
+            .KeyWord{
+                margin: 0;
+                font-size: 1.25rem;
+                color: black;
+                padding: 0 0.625rem; 
+                font-weight: bold;
+                line-height: 1.875rem;
+                height: 1.875rem;
+            }
+            >div{
+                margin: 0 0.625rem; 
+                text-indent: 0.75rem;
+                font-size: 0.9375rem;
+                height: 1.6875rem;
+                background-color: white;
+                line-height: 1.6875rem;
+                border-top: 0.0625rem solid #cccccc;
+            }
+        }
+        >div{
+            height: 2.1875rem;
+            a{
+                display: inline-block;
+                width: 4.6875rem;
+                height: 1.28rem;
+                line-height: 1.28rem;
+                background-color: #cccccc;
+                font-size: 0.55467rem;
+                color: #212121;
+                text-align: center;
+                border-radius: 0.10667rem;
+                margin: 0.42667rem 0.256rem 0;
+                padding-left: 0.10667rem;
+                padding-right: 0.10667rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+
+    }
+}

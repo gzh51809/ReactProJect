@@ -23,6 +23,9 @@ class Show extends React.Component{
     sortByTime(){
         console.log(777)
     }
+    // onScroll(){
+    //     console.log("scroll,",999)
+    // }
     render(){
         return <div id="show">
                 <ShowSearch 

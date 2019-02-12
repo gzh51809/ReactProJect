@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import {connect} from 'react-redux';
 import '../../../CSS/HomeCss/searchPage.scss'
 class SearchPage extends React.Component{
     constructor(){
@@ -43,12 +44,12 @@ class SearchPage extends React.Component{
         let keyWord = this.refs.keyWord.value;
         axios.post('http://localhost:4008/farapi/Show/showsLibrary?cid=3&k='+keyWord)
         .then(res=>{
-            // console.log(res);
             this.refs.data.innerHTML=res.data;
         })
     }
     goBack(){
         this.props.history.goBack();
+        this.props.dispatch({type:'CHANG_NAVBAR_STATE',payload:{addClass:false}})
     }
 
     iconDisapear(){
@@ -89,4 +90,5 @@ class SearchPage extends React.Component{
         </div>
     } 
 }
+SearchPage = connect()(SearchPage);
 export default SearchPage;

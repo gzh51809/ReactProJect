@@ -6,7 +6,8 @@
     .showSearch {
         margin: 0.625rem;
         line-height: 1.9375rem;
-        overflow: hidden;
+        overflow-y: visible;
+        overflow-x: hidden;
         >div {
             float: left;
         }
@@ -40,13 +41,13 @@
             margin-right: 0.9375rem;
             line-height: 1.875rem;
             background: #ebebeb;
-
+            overflow: hidden;
             a {
                 text-decoration: none;
 
                 span {
                     font-size: 0.875rem;
-
+                    color: #666666;
                     i {
                         font-size: 0.9375rem;
                     }
@@ -58,15 +59,15 @@
             font-size: 1.0625rem;
             position: relative;
             color: #666666;
-
             .sortType {
+                // z-index: 4;
+                background-color: white;
                 position: absolute;
                 top: 80%;
                 left: -0.9375rem;
                 width: 4.375rem;
                 font-size: 0.875rem;
                 color: #666666;
-
                 span {
                     padding-bottom: 0.3125rem;
                 }
@@ -85,18 +86,23 @@
             }
         }
         .navBar{
-            display: flex;
-            overflow: hidden;
-            position: relative;
-            height: 40px;
-            // overflow-x: scroll;
-            width: 1000px;
+            height: 2.1875rem;
+            overflow-x: scroll;
+            width: 100vw;
+            box-sizing: border-box;
             ul{
-                position: absolute;
-                left: -400px;
+                overflow: hidden;
+                width:37.5rem;
+                height: 2.1875rem;
                 li{
                     list-style: none;
                     float: left;
+                    margin:0 0.625rem;
+                    font-size: 0.8125rem;
+                }
+                .selected{
+                    color: #ff7919; 
+                    border-bottom:  0.125rem solid  #ff7919;
                 }
             }
         }

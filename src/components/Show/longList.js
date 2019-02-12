@@ -17,12 +17,18 @@ class LongList extends React.Component{
                 }
             ]
         }
+        this.handleScroll = this.handleScroll.bind(this)
     }
     loadingToast() {
         Toast.loading('加载中...', 1, () => {
         //   console.log('Load complete !!!');
         });
-      }
+    }
+
+    componentWillMount(){
+        window.addEventListener('scroll',this.handleScroll,false);
+    }
+
     componentDidMount(){
         this.loadingToast();
         axios.post('http://localhost:4008/farapi/Show/getShowList')
@@ -32,13 +38,37 @@ class LongList extends React.Component{
             })
         })
     }
+    componentWillUnmount() {
+        // window.onscroll = '';
+        // console.log(888)
+        window.removeEventListener('scroll',this.handleScroll,false)
+    }
+    
+    handleScroll=(event)=>{
+        let clientHeight = document.getElementsByClassName('LongList')[0].clientHeight; //可视区域高度 
+        let scrollTop  = document.getElementsByClassName('LongList')[0].scrollTop;//滚动条滚动高度
+        let scrollHeight = document.getElementsByClassName('LongList')[0].children[0].scrollHeight; //滚动内容高度
+        let res = scrollHeight-scrollTop-clientHeight;
+        // console.log(event)
+        if(res<=-109){
+            this.loadingToast();
+            axios.post('http://localhost:4008/farapi/Show/getShowList')
+            .then(res=>{
+                this.setState({
+                    LongDataList:[...this.state.LongDataList,...res.data.data.list.slice(0,7)]
+                })
+            })
+        }
+    }
+
     render(){
         // console.log(this.state.LongDataList);
-        return <div className="LongList">
+        // let {onScroll} = this.props;
+        return <div className="LongList" onScroll={this.handleScroll}>
                 <ul>
                     {
                         this.state.LongDataList.map(item=>{
-                            return  <li key={item.id} id={item.id}>
+                            return  <li key={item.id+Math.random()*10} id={item.id}>
                                         <a href={'https://m.juooo.com/ticket/'+item.id}>
                                             <div className="img">
                                                     <img src={"http://image.juooo.com/"+item.pic}/>
@@ -51,7 +81,7 @@ class LongList extends React.Component{
                                             </div>
                                         </a>
                                     </li>
-                        })
+                            })
                     }
                 </ul>
                 <div className="LoadingMore">

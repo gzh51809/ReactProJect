@@ -38,7 +38,7 @@ class Navbar extends React.Component{
         let {NavChange} = this.props;
         let currentIndex = store.getState().currentIndex;
         let addClass = store.getState().addClass;
-        console.log('navb',addClass);
+        // console.log('navb',addClass);
         return  <div className={`footerFiex ${addClass?'disapear':''}`}>
                 <ul>
                 {

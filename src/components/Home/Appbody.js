@@ -1,5 +1,7 @@
 import React from 'react';
-import { Carousel, Toast, WingBlank } from 'antd-mobile';
+import {withRouter} from 'react-router-dom';
+import {connect} from 'react-redux';
+import { Carousel, Toast} from 'antd-mobile';
 import axios from 'axios';
 class Appbody extends React.Component{
     constructor(){
@@ -97,6 +99,10 @@ class Appbody extends React.Component{
                 })
             });
     }
+    goToAllShow(){
+        this.props.history.push('/show');
+        this.props.dispatch({type:"CHANGE_CURRENTINDEX",payload:{currentIndex:1}});
+    }
     render(){
         // console.log(this.state.showList)
         return <div id="main">
@@ -169,10 +175,12 @@ class Appbody extends React.Component{
                                 }
                             </ul>
                             <div className="more">
-                                <p><span>查看全部演出></span></p>
+                                <p><span onClick={this.goToAllShow.bind(this)}>查看全部演出></span></p>
                             </div>
                         </div>     
                 </div>
     } 
 }
+Appbody = connect()(Appbody);
+Appbody = withRouter(Appbody);
 export default Appbody;
