@@ -29,7 +29,8 @@ class App extends Component {
     let historyIndex = this.props.currentIndex;
     this.props.dispatch({type:'CHANGE_CURRENTINDEX',payload:{currentIndex:idx,lastIndex:historyIndex}})
     if(path=='/ticket'||path=='/mine'){
-      if(this.state.islogin=='false'){
+      if(this.state.islogin==false){
+        this.props.dispatch({type:'CHANG_NAVBAR_STATE',payload:{addClass:true}});
         this.props.history.push('/login');
       }
       if(path=='/ticket'){

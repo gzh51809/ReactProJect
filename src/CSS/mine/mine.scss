@@ -51,6 +51,7 @@
                     top: 0;
                     right: -0.625rem;
                     color: white;
+                    font-size: 1.25rem;
                 }
              }
         }
@@ -100,8 +101,8 @@
         flex-direction: column;
         .bodyOfMine-t{
             width: 100%;
-            padding: 10px 0;
-            height: 40px;
+            padding: 0.625rem 0;
+            height: 2.5rem;
             background-color: white;
             ul{
                 display: flex;
@@ -112,18 +113,18 @@
                     flex: 25%;
                     list-style: none;
                     text-align: center;
-                    border-right: 1px solid #e6e6e6;
+                    border-right: 0.0625rem solid #e6e6e6;
                     p{
                         margin: 0 0 0.3125rem 0;
                         color:#ff7919; 
                         font-weight: bold;
-                        font-size: 17px;
+                        font-size: 1.0625rem;
                         span{
-                            font-size: 13px;   
+                            font-size: 0.8125rem;   
                         }
                     }
                     >span{
-                        font-size: 14px;
+                        font-size: 0.875rem;
                         color:#8c8c8c
                     }
                 }

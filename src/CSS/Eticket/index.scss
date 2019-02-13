@@ -7,7 +7,25 @@
         width: 1.875rem;
         height: 1.875rem;
         left: 5%;
-        top: 4%;
-        
+        top: 11%;
+       i{
+           font-size: 1.25rem;
+       } 
+    }
+    .am-navbar{
+        height: 2.8125rem;
+        .am-navbar-title{
+            font-size: 1.25rem;
+        }
+        .am-navbar-right{
+            width: 3.25rem;
+            height: 2.8125rem;
+            >div{
+                svg{
+                    width: 1.375rem;
+                    height: 1.375rem; 
+                }
+            }
+        }
     }
 }
