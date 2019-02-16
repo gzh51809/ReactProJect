@@ -28,7 +28,7 @@ class City extends React.Component{
     }
     componentDidMount(){
         // Index/getCityList
-        axios.post('http://localhost:4008/farapi/Index/getCityList')
+        axios.post('http://120.79.29.175:3008/farapi/Index/getCityList')
         .then(res=>{
             // console.log(res.data.city_list);
             this.setState({

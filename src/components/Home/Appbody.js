@@ -91,7 +91,7 @@ class Appbody extends React.Component{
       }
     componentDidMount(){
         this.loadingToast();
-            axios.post('http://localhost:4008/farapi/index/hotsShowList')
+            axios.post('http://120.79.29.175:3008/farapi/index/hotsShowList')
             .then(res=>{
                 this.setState({
                     dataList:res.data.data.slice(0,4),

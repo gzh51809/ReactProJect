@@ -31,7 +31,7 @@ class LongList extends React.Component{
 
     componentDidMount(){
         this.loadingToast();
-        axios.post('http://localhost:4008/farapi/Show/getShowList')
+        axios.post('http://120.79.29.175:3008/farapi/Show/getShowList')
         .then(res=>{
             this.setState({
                 LongDataList:res.data.data.list
@@ -52,7 +52,7 @@ class LongList extends React.Component{
         // console.log(event)
         if(res<=-109){
             this.loadingToast();
-            axios.post('http://localhost:4008/farapi/Show/getShowList')
+            axios.post('http://120.79.29.175:3008/farapi/Show/getShowList')
             .then(res=>{
                 this.setState({
                     LongDataList:[...this.state.LongDataList,...res.data.data.list.slice(0,7)]

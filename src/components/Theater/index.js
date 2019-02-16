@@ -30,7 +30,7 @@ class Theater extends React.Component{
       }
     componentDidMount(){
         this.loadingToast()
-        axios.post('http://localhost:4008/farapi/Theatre/theatreListData?page=1')
+        axios.post('http://120.79.29.175:3008/farapi/Theatre/theatreListData?page=1')
         .then(res=>{
             this.setState({
                 LongDataList:res.data.datas
