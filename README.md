@@ -9,4 +9,4 @@
 框架：antd-mobile
 
 
-运行：打开本地服务器：node proxy   运行代码：npm start
+访问地址：http://120.79.29.175:3008/#/home
